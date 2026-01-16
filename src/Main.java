@@ -5,16 +5,12 @@ public class Main {
         System.out.println("Задание 1");
         int[] inputArray1 = {1243, 534, 213, 5464, 324};
         float[] outputArray1 = new float[4];
-        System.out.println("Сумма всех выплат за месяц");
         int sum = 0;
         for (int el : inputArray1) {
             sum += el;
         }
         outputArray1[0] = sum;
-        System.out.println(Arrays.toString(inputArray1));
-        System.out.println(Arrays.toString(outputArray1));
 
-        System.out.println("Минимальная выплата за месяц");
         int minNum = 999999;
         for (int el1 : inputArray1)
             {
@@ -23,10 +19,7 @@ public class Main {
                 }
             }
             outputArray1[1] = minNum;
-            System.out.println(Arrays.toString(inputArray1));
-            System.out.println(Arrays.toString(outputArray1));
 
-            System.out.println("Максимальная выплата за месяц");
             int maxNum = 0;
             for (int el2 : inputArray1) {
                 if (el2 > maxNum) {
@@ -34,10 +27,7 @@ public class Main {
                 }
             }
             outputArray1[2] = maxNum;
-            System.out.println(Arrays.toString(inputArray1));
-            System.out.println(Arrays.toString(outputArray1));
 
-            System.out.println("Средняя выплата за месяц");
             float sredNum = (float) sum / inputArray1.length;
             outputArray1[3] = sredNum;
             System.out.println(Arrays.toString(inputArray1));
@@ -69,13 +59,13 @@ public class Main {
 
             System.out.println("Задание 4");
             int[] inputArray4 = {53364, 97894, 50600, -2323, 46556};
-            boolean[] outputArray4 = new boolean[5];
+            boolean[] outputArray4 = new boolean[1];
             for (int i = 0; i < inputArray4.length; i++) {
                 if (inputArray4[i] < 0) {
-                    outputArray4[i] = false;
+                    outputArray4[0] = false;
                     break;
                 } else {
-                    outputArray4[i] = true;
+                    outputArray4[0] = true;
                 }
             }
             System.out.println(Arrays.toString(inputArray4));
@@ -83,14 +73,14 @@ public class Main {
 
             System.out.println("Задание 5");
             int[] inputArray5 = {3253, 433634, -43, 78756, 0};
-            boolean[] outputArray5 = new boolean[5];
+            int[] outputArray5 = new int[1];
+            int count = 0;
             for (int i = 0; i < inputArray5.length; i++) {
-                if (inputArray5[i] <= 0) {
-                    outputArray5[i] = false;
-                } else {
-                    outputArray5[i] = true;
+                if (inputArray5[i] > 0) {
+                    count++;
                 }
             }
+            outputArray5[0] = count;
             System.out.println(Arrays.toString(inputArray5));
             System.out.println(Arrays.toString(outputArray5));
 
